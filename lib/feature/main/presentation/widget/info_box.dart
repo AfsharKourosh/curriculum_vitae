@@ -1,4 +1,5 @@
 import 'package:curriculum_vitae/core/components/utils/constants.dart';
+import 'package:curriculum_vitae/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 class InfoBox extends StatelessWidget {
@@ -6,7 +7,8 @@ class InfoBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    CrossAxisAlignment crossStart = CrossAxisAlignment.start;
+    final localizations = AppLocalizations.of(context)!;
+    final crossStart = CrossAxisAlignment.start;
     return Padding(
       padding: AppSizes.all30,
       child: Column(
@@ -28,21 +30,21 @@ class InfoBox extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: crossStart,
                   children: [
-                    Text('data'),
+                    Text(localizations.name),
                     Row(
                       children: [
-                        Text('data'),
+                        Text(localizations.job),
                         Spacer(),
                         Icon(Icons.favorite_border_sharp),
                       ],
                     ),
-                    Row(children: [Icon(Icons.location_on), Text('data')]),
+                    Row(children: [Icon(Icons.location_on), Text(localizations.location)]),
                   ],
                 ),
               ),
             ],
           ),
-          Text('data'),
+          Text(localizations.summary),
         ],
       ),
     );
