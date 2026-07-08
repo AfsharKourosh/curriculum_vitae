@@ -1,4 +1,4 @@
-import 'package:curriculum_vitae/core/components/utils/constants.dart';
+import 'package:curriculum_vitae/core/utils/constants.dart';
 import 'package:curriculum_vitae/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +14,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Text(AppLocalizations.of(context)!.profileTitle),
       titleSpacing: 20,
       actionsPadding: EdgeInsets.only(right: 20),
-      backgroundColor: AppColors.darkAppBar,
+      backgroundColor: AppColors.darkBlack,
       actions: [
         IconButton(
           onPressed: () {},
