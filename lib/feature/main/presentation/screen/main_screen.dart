@@ -1,4 +1,5 @@
 import 'package:curriculum_vitae/core/components/custom_app_bar.dart';
+import 'package:curriculum_vitae/feature/main/presentation/widget/info_box.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
@@ -13,7 +14,10 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
-      body: Center(child: Text('data')),
+      body: Column(children: [
+        InfoBox()
+      ],),
     );
   }
 }
+
