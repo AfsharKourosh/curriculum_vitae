@@ -12,7 +12,6 @@ class SkillsBox extends StatefulWidget {
 }
 
 class _SkillsBoxState extends State<SkillsBox> {
-  
   SkillsType skill = SkillsType.photoshop;
 
   void updateSkillSelect(SkillsType skillsType) {
