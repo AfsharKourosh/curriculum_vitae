@@ -25,7 +25,7 @@ class _SkillsBoxState extends State<SkillsBox> {
     return Padding(
       padding: AppSizes.sym3016,
       child: Column(
-        spacing: 10,
+        spacing: 20,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(

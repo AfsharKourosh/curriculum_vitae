@@ -14,7 +14,7 @@ class InfoBox extends StatelessWidget {
       padding: AppSizes.sym3016,
       child: Column(
         crossAxisAlignment: crossStart,
-        spacing: 10,
+        spacing: 20,
         children: [
           Row(
             spacing: 10,

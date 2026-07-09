@@ -12,11 +12,12 @@ class PersonalInformation extends StatelessWidget {
     return Padding(
       padding: AppSizes.sym3016,
       child: Column(
-        spacing: 10,
+        spacing: 20,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(localize.personalInformation, style: textTheme),
           TextField(
+            style: textTheme,
             decoration: InputDecoration(
               border: OutlineInputBorder(borderRadius: AppSizes.circle10),
               filled: true,
@@ -29,6 +30,7 @@ class PersonalInformation extends StatelessWidget {
             ),
           ),
           TextField(
+            style: textTheme,
             decoration: InputDecoration(
               border: OutlineInputBorder(borderRadius: AppSizes.circle10),
               filled: true,

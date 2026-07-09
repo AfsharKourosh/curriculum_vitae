@@ -22,8 +22,8 @@ class AppAddress {
 
 class AppSizes {
   static const EdgeInsetsGeometry sym3016 = EdgeInsetsGeometry.symmetric(
-    horizontal: 30,
-    vertical: 16,
+    horizontal: 20,
+    vertical: 10,
   );
   static final BorderRadius circle10 = BorderRadius.circular(10);
 }

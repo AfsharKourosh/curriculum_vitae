@@ -18,15 +18,18 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       backgroundColor: AppColors.darkBackground,
       appBar: CustomAppBar(),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          InfoBox(),
-          Divider(),
-          SkillsBox(),
-          Divider(),
-          PersonalInformation(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          spacing: 20,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            InfoBox(),
+            Divider(),
+            SkillsBox(),
+            Divider(),
+            PersonalInformation(),
+          ],
+        ),
       ),
     );
   }

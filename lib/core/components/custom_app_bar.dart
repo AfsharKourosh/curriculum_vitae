@@ -19,6 +19,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       actionsPadding: EdgeInsets.only(right: 20),
       backgroundColor: AppColors.darkBlack,
       actions: [
+        IconButton(onPressed: () {}, icon: Icon(Icons.language)),
         IconButton(
           onPressed: () {},
           icon: Icon(Icons.light_mode),
