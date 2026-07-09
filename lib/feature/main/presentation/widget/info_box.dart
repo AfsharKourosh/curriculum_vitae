@@ -1,4 +1,4 @@
-import 'package:curriculum_vitae/core/components/utils/constants.dart';
+import 'package:curriculum_vitae/core/utils/constants.dart';
 import 'package:curriculum_vitae/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
@@ -9,11 +9,12 @@ class InfoBox extends StatelessWidget {
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context)!;
     final crossStart = CrossAxisAlignment.start;
+    final textTheme = Theme.of(context).textTheme.bodySmall;
     return Padding(
-      padding: AppSizes.all30,
+      padding: AppSizes.sym3016,
       child: Column(
         crossAxisAlignment: crossStart,
-        spacing: 10,
+        spacing: 20,
         children: [
           Row(
             spacing: 10,
@@ -30,21 +31,26 @@ class InfoBox extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: crossStart,
                   children: [
-                    Text(localizations.name),
+                    Text(localizations.name, style: textTheme),
                     Row(
                       children: [
-                        Text(localizations.job),
+                        Text(localizations.job, style: textTheme),
                         Spacer(),
                         Icon(Icons.favorite_border_sharp),
                       ],
                     ),
-                    Row(children: [Icon(Icons.location_on), Text(localizations.location)]),
+                    Row(
+                      children: [
+                        Icon(Icons.location_on,color: AppColors.textTheme,),
+                        Text(localizations.location, style: textTheme),
+                      ],
+                    ),
                   ],
                 ),
               ),
             ],
           ),
-          Text(localizations.summary),
+          Text(localizations.summary, style: textTheme),
         ],
       ),
     );
