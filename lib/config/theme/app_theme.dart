@@ -9,11 +9,15 @@ class AppTheme {
     return ThemeData(
       useMaterial3: false,
       dividerTheme: DividerThemeData(color: AppColors.textTheme),
-      iconTheme: IconThemeData(),
+      iconTheme: IconThemeData(color: Colors.white,size: 18),
       textTheme: TextTheme(bodySmall: TextStyle(color: AppColors.textTheme)),
       primaryTextTheme: TextTheme(
         bodySmall: TextStyle(color: AppColors.darkBlack),
       ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(minimumSize: Size(double.infinity, 50)),
+      ),
+    
     );
   }
 

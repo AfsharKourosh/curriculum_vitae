@@ -11,7 +11,7 @@ class InfoBox extends StatelessWidget {
     final crossStart = CrossAxisAlignment.start;
     final textTheme = Theme.of(context).textTheme.bodySmall;
     return Padding(
-      padding: AppSizes.all30,
+      padding: AppSizes.sym3016,
       child: Column(
         crossAxisAlignment: crossStart,
         spacing: 10,

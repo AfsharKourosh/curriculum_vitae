@@ -23,7 +23,7 @@ class _SkillsBoxState extends State<SkillsBox> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: AppSizes.all30,
+      padding: AppSizes.sym3016,
       child: Column(
         spacing: 10,
         crossAxisAlignment: CrossAxisAlignment.start,

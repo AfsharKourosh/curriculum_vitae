@@ -7,10 +7,8 @@ class AppColors {
   static const Color skillBackground = Color(0xFF292929);
   static const Color blueShadow = Color(0xFF0096FF);
   static const Color pinkShadow = Color(0xFFFFC0CB);
- static const Color orangeShadow = Color(0xFFFFA500);
- static const Color purpleShadow = Color(0xFF800080);
-
-  
+  static const Color orangeShadow = Color(0xFFFFA500);
+  static const Color purpleShadow = Color(0xFF800080);
 }
 
 class AppAddress {
@@ -23,6 +21,9 @@ class AppAddress {
 }
 
 class AppSizes {
-  static const EdgeInsetsGeometry all30 = EdgeInsetsGeometry.all(30);
+  static const EdgeInsetsGeometry sym3016 = EdgeInsetsGeometry.symmetric(
+    horizontal: 30,
+    vertical: 16,
+  );
   static final BorderRadius circle10 = BorderRadius.circular(10);
 }
