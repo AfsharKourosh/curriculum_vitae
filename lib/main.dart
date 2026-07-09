@@ -17,14 +17,18 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   ThemeMode themeMode = ThemeMode.dark;
-  languageSelect languageApp=languageSelect.en;
-  Locale get localeApp =>
-      languageApp == languageSelect.en ? const Locale('en') : const Locale('fa');
-void updateLanguage(){
-   setState(() {
-      languageApp = languageApp == languageSelect.en ? languageSelect.fa : languageSelect.en;
+  languageSelect languageApp = languageSelect.en;
+  Locale get localeApp => languageApp == languageSelect.en
+      ? const Locale('en')
+      : const Locale('fa');
+
+  void updateLanguage() {
+    setState(() {
+      languageApp == languageSelect.en
+          ? languageApp = languageSelect.fa
+          : languageApp = languageSelect.en;
     });
-}
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +40,8 @@ void updateLanguage(){
       theme: themeMode == ThemeMode.dark
           ? AppTheme.dark().getTheme(localeApp.languageCode)
           : AppTheme.light().getTheme(localeApp.languageCode),
-      home: MainScreen(updateLanguage:updateLanguage,
+      home: MainScreen(
+        updateLanguage: updateLanguage,
         isDark: themeMode == ThemeMode.dark ? true : false,
         updateThemeMode: () {
           setState(() {
