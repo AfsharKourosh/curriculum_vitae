@@ -7,18 +7,35 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  ThemeMode themeMode = ThemeMode.dark;
+
+  @override
   Widget build(BuildContext context) {
-    AppTheme appTheme = AppTheme();
     return MaterialApp(
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       debugShowCheckedModeBanner: false,
-      theme: appTheme.getTheme('en'),
-      home: const MainScreen(),
+      theme: themeMode == ThemeMode.dark
+          ? AppTheme.dark().getTheme()
+          : AppTheme.light().getTheme(),
+      home: MainScreen(
+        isDark: themeMode == ThemeMode.dark ? true : false,
+        updateThemeMode: () {
+          setState(() {
+            themeMode == ThemeMode.dark
+                ? themeMode = ThemeMode.light
+                : themeMode = ThemeMode.dark;
+          });
+        },
+      ),
     );
   }
 }

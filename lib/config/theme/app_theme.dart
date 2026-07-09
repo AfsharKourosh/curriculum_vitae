@@ -2,27 +2,43 @@ import 'package:curriculum_vitae/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  //   MyTheme.dark():
-  //   MyTheme.light():
+  final Color scaffoldBackground;
+  final Color textThemeApp;
+  final Brightness brightness;
 
-  ThemeData getTheme(String languageCode) {
+  AppTheme.dark()
+    : scaffoldBackground = AppColors.darkBackground,
+      textThemeApp = AppColors.textTheme,
+      brightness = Brightness.dark;
+  AppTheme.light()
+    : scaffoldBackground = AppColors.textTheme,
+      textThemeApp = AppColors.darkBlack,
+      brightness = Brightness.light;
+
+  ThemeData getTheme() {
     return ThemeData(
       useMaterial3: false,
-      dividerTheme: DividerThemeData(color: AppColors.textTheme),
+      brightness: brightness,
+      dividerTheme: DividerThemeData(color: textThemeApp),
       iconTheme: IconThemeData(color: Colors.white, size: 18),
       textTheme: TextTheme(
-        bodySmall: TextStyle(
-          color: AppColors.textTheme,
-          fontSize: 14,
-          height: 1.5,
+        bodySmall: TextStyle(color: textThemeApp, fontSize: 14, height: 1.5),
+      ),
+      primaryTextTheme: TextTheme(bodySmall: TextStyle()),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          minimumSize: Size(double.infinity, 50),
+          backgroundColor: AppColors.pinkShadow,
         ),
       ),
-      primaryTextTheme: TextTheme(
-        bodySmall: TextStyle(color: AppColors.darkBlack),
+      inputDecorationTheme: InputDecorationTheme(
+        border: OutlineInputBorder(
+          borderSide: BorderSide.none,
+          borderRadius: AppSizes.circle10,
+        ),
       ),
-      elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ElevatedButton.styleFrom(minimumSize: Size(double.infinity, 50)),
-      ),
+      outlinedButtonTheme: OutlinedButtonThemeData(),
+      scaffoldBackgroundColor: scaffoldBackground,
     );
   }
 
