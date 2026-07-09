@@ -5,3 +5,4 @@ enum SkillsType{
   afterEffect,
   lightRoom,
 }
+enum languageSelect{en,fa}
